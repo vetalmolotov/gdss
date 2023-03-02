@@ -1,0 +1,118 @@
+.form {
+    &-item {
+        display: block;
+        position: relative;
+        input[type="text"],
+        input[type="password"] {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 48px;
+            border: 2px solid #353945;
+            border-radius: 70px;
+            background: transparent;
+            padding: 0 42px 0 16px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16px;
+            color: #E6E8EC;
+            outline: none;
+            &::placeholder {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 16px;
+                color: #777E91;
+            }
+            &:focus,
+            &:focus:hover {
+                color: #E6E8EC;
+                border: 2px solid #FFC737;
+                &::placeholder {
+                    color: #E6E8EC
+                }
+            }
+            &:hover {
+                border: 2px solid #777E90;
+            }
+        }
+        p {
+            display: none;
+            margin: 8px 0 0 18px;
+            padding: 0;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 12px;
+            color: #FF6838;
+        }
+        span {
+            display: none;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            cursor: pointer;
+        }
+        &.error {
+            input[type="text"],
+            input[type="password"] {
+                border: 2px solid #FF6838 !important;
+                color: #FF6838;
+                &::placeholder {
+                    color: #FF6838;
+                }
+            }
+            p {
+                display: block;
+            }
+            span {
+                display: block;
+                background: 
+                    no-repeat
+                    left top / cover
+                    url(~/img/icons/input-clear.png);
+            }
+        }
+        &.success {
+            input[type="text"],
+            input[type="password"] {
+                border: 2px solid #58BD7D !important;
+                color: #E6E8EC;
+                &::placeholder {
+                    color: #E6E8EC;
+                }
+            }
+            span {
+                display: block;
+                background: 
+                    no-repeat
+                    left top / cover
+                    url(~/img/icons/input-done.png);
+            }
+        }
+        &.password {
+            input[type="text"] {
+                color: #E6E8EC;
+                &::placeholder {
+                    color: #E6E8EC;
+                }
+            }
+            span {
+                display: block;
+                background: 
+                    no-repeat
+                    left top / cover
+                    url(~/img/icons/input-show.png);
+            }
+        }
+        & + & {
+            margin-top: 10px;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background-color: #FFC737;
+    border-radius: 15px;
+    i {
+        width: 35px;
+        height: 35px;
+    }
+    &-megaphone i {
+        background: 
+        no-repeat 
+        center center / cover
+        url("~/img/icons/megaphone.png");
+    }
+    &-smile i {
+        background: 
+        no-repeat 
+        center center / cover
+        url("~/img/icons/smile.png");
+    }
+    &-chart i {
+        background: 
+        no-repeat 
+        center center / cover
+        url("~/img/icons/chart.png");
+    }
+    &-singin i {
+        background: 
+        no-repeat 
+        center center / cover
+        url("~/img/icons/singin.png");
+    }
+
+    &-green {
+        background-color: #58BD7D;
+        width: 45px;
+        height: 45px;
+        i {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        width: 45px;
+        height: 45px;
+        i {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
